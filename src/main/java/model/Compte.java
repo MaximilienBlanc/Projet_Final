@@ -1,5 +1,5 @@
 package model;
 
-public class Compte {
+public abstract class Compte {
 
 }
