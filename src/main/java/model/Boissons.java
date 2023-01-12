@@ -1,5 +1,5 @@
 package model;
 
-public class Boissons {
+public class Boissons extends Consommation{
 	
 }
