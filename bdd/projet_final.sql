@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 20 jan. 2023 à 22:42
+-- Généré le : lun. 23 jan. 2023 à 07:25
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -30,15 +30,15 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `compte`;
 CREATE TABLE IF NOT EXISTS `compte` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `login` varchar(25) NOT NULL,
-  `password` varchar(25) NOT NULL,
-  `nom` varchar(25) DEFAULT NULL,
-  `prenom` varchar(25) DEFAULT NULL,
-  `mail` varchar(25) DEFAULT NULL,
-  `tel` varchar(15) DEFAULT NULL,
+  `login` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `password` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `nom` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `prenom` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `mail` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `tel` varchar(15) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   `date_naissance` date DEFAULT NULL,
-  `civilite` enum('homme','femme','nb') DEFAULT NULL,
-  `type_compte` enum('client','admin') NOT NULL,
+  `civilite` enum('homme','femme','nb') CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
+  `type_compte` enum('client','admin') CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -59,18 +59,18 @@ INSERT INTO `compte` (`id`, `login`, `password`, `nom`, `prenom`, `mail`, `tel`,
 DROP TABLE IF EXISTS `jeu`;
 CREATE TABLE IF NOT EXISTS `jeu` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nom` varchar(25) NOT NULL,
+  `nom` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `nbJoueurMin` int NOT NULL,
   `nbJoueurMax` int NOT NULL,
   `ageMin` int NOT NULL,
   `duree` int NOT NULL COMMENT 'duree du jeu en min',
-  `editeur` varchar(25) NOT NULL,
+  `editeur` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `annee` year NOT NULL,
   `prix` double NOT NULL,
-  `image` varchar(150) NOT NULL COMMENT 'lien stockage image',
-  `type_jeu` varchar(25) NOT NULL,
+  `image` varchar(150) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL COMMENT 'lien stockage image',
+  `type_jeu` varchar(25) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `quantite` int NOT NULL COMMENT 'quantite disponible à la vente',
-  `description` varchar(2000) NOT NULL,
+  `description` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=154 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
