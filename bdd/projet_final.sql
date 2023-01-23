@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 23 jan. 2023 à 07:25
+-- Généré le : lun. 23 jan. 2023 à 07:41
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.0.26
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `compte` (
   `civilite` enum('homme','femme','nb') CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci DEFAULT NULL,
   `type_compte` enum('client','admin') CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `compte`
@@ -72,7 +72,7 @@ CREATE TABLE IF NOT EXISTS `jeu` (
   `quantite` int NOT NULL COMMENT 'quantite disponible à la vente',
   `description` varchar(2000) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=154 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=154 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `jeu`
@@ -147,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `reservation` (
   `id_compte` int NOT NULL,
   `id_jeu` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb3;
 
 -- --------------------------------------------------------
 
@@ -160,7 +160,7 @@ CREATE TABLE IF NOT EXISTS `table_bar` (
   `id` int NOT NULL AUTO_INCREMENT,
   `nb_personne` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 
 --
 -- Déchargement des données de la table `table_bar`
